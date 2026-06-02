@@ -13,10 +13,10 @@ class FirstPage extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (_) => SecondPage()),
+              MaterialPageRoute(builder: (_) => SecondPage(name: "Mizu")),
             );
           },
-          child: child,
+          child: Text("Second Page?"),
         ),
       ),
     );
