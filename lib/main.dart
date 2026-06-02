@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/chapter7/first_page.dart';
 import 'chapter6/exercise1.dart';
 import 'chapter6/exercise2.dart';
 import 'chapter6/exercise3.dart';
@@ -116,6 +117,15 @@ class Homepage extends StatelessWidget {
               );
             },
             child: Text("Go to Chapter 7 - Exercise 2"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const FirstPage()),
+              );
+            },
+            child: Text("First Page"),
           ),
           ElevatedButton(
             onPressed: () {
