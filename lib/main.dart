@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/chapter6/chapter6.dart';
 import 'package:myapp/chapter7/chapter7.dart';
+import 'package:myapp/chapter9/chapter9.dart';
+import 'package:myapp/test/test.dart';
 
 import 'mizu.dart';
 
@@ -22,7 +24,16 @@ class Homepage extends StatelessWidget {
         actions: [
           IconButton(icon: const Icon(Icons.search), onPressed: () {}),
           IconButton(icon: const Icon(Icons.settings), onPressed: () {}),
-          IconButton(icon: const Icon(Icons.notifications), onPressed: () {}),
+          IconButton(
+            icon: const Icon(Icons.notifications),
+            color: Colors.green,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Test()),
+              );
+            },
+          ),
         ],
       ),
       body: ListView(
@@ -54,6 +65,33 @@ class Homepage extends StatelessWidget {
               );
             },
             child: Text("Chapter 7 Lessons"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Chapter9()),
+              );
+            },
+            child: Text("Chapter 9 Lessons"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Test()),
+              );
+            },
+            child: Text("Go to testing page"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Center()),
+              );
+            },
+            child: Text("Center"),
           ),
         ],
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:myapp/chapter7/first_page.dart';
+import 'package:myapp/chapter7/pageview.dart';
 
 import '../chapter7/exercise1.dart' as c7e1;
 import '../chapter7/exercise2.dart' as c7e2;
@@ -40,6 +41,15 @@ class Chapter7 extends StatelessWidget {
               );
             },
             child: Text("First Page"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Pageview()),
+              );
+            },
+            child: Text("Page View"),
           ),
         ],
       ),
